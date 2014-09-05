@@ -1,0 +1,10 @@
+#!/bin/bash
+
+if [ -z "$(nmap 127.0.0.1 -p 80|grep open)" ]; then
+        echo "no esta Corriendo"
+	    cd /home/user/...
+        python manage.py runserver ip:80
+else
+        echo "Esta corriendo"
+fi
+
