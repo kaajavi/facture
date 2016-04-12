@@ -2,8 +2,10 @@
 
 if [ -z "$(nmap 127.0.0.1 -p 80|grep open)" ]; then
         echo "no esta Corriendo"
-	    cd /home/user/...
-        python manage.py runserver ip:80
+	fuser -k 80/tcp
+	fuser -k 80/tcp
+        cd /home/idcadmin/sistemaFacturacion/facture
+        python manage.py runserver 10.0.10.100:80
 else
         echo "Esta corriendo"
 fi
